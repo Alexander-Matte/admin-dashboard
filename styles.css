@@ -1,3 +1,53 @@
-h1 {
-    color: red;
+body {
+    display: grid;
+    grid-template-columns: auto repeat(3, 1fr) ;
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-areas: 
+                                            "sidebar    header     header    header"
+                                            "sidebar    content    content    content"
+                                            "sidebar     content    content   content" 
+                                            "sidebar    content     content   content";
+
+
+    background-color: lightgray;
 }
+
+#sidebar-container {
+    grid-area: sidebar;
+    display: grid;
+    gap: 100px;
+    padding: 1em;
+    background-color: #1DA1F2; 
+}
+
+#icon-header {
+    color: white;
+}
+
+#side-nav {
+    display: grid;
+    gap: 20px;
+   
+}
+
+#side-bar-support {
+    display: grid;
+    gap: 20px;
+}
+
+.side-nav-links, .side-support-links{
+    text-decoration: none;
+    color: white;
+}
+
+
+#header-container {
+    grid-area: header;
+    display: grid;
+}
+
+#content-container {
+    grid-area: content;
+    display: grid;
+}
+
